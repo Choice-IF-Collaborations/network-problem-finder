@@ -57,6 +57,9 @@ $(function() {
     $('#device_info #device_hardware_model').text(device.hardware_model);
     $('#test_device_name').text(device.name);
 
+    $('.test_bracket_content p, .advice').hide();
+    $('.status_icon').attr('class', 'status_icon pending');
+
     //randomProblem = getRandomInt(0, 2);
 
     // Move device info into view
