@@ -1,4 +1,6 @@
 $(function() {
+  const TEST_COMPLETE_STRING = "Test complete";
+
   let devices = (function () {
     let json = null;
 
@@ -41,7 +43,7 @@ $(function() {
     return json;
   })();
 
-  let randomProblem = 2;
+  let randomProblem = 1;
 
   $('body').on('click', '.device', function(e) {
     e.preventDefault();
@@ -95,6 +97,7 @@ $(function() {
       });
     } else if (status === "bad") {
       $('#test_internet_connection p.result.bad, #test_internet_connection .advice, #test_internet_connection .advice p').delay(2000).fadeIn(250, function() {
+        $('#device_info #device_status').text(TEST_COMPLETE_STRING);
         $('#test_internet_connection .status_icon').removeClass('working').addClass('bad');
       });
     }
@@ -124,6 +127,7 @@ $(function() {
       });
     } else if (status === "bad") {
       $('#test_router p.result.bad, #test_router .advice, #test_router .advice p').delay(2000).fadeIn(250, function() {
+        $('#device_info #device_status').text(TEST_COMPLETE_STRING);
         $('#test_router .status_icon').removeClass('working').addClass('bad');
       });
     }
@@ -150,6 +154,7 @@ $(function() {
 
     } else if (status === "bad") {
       $('#test_device p.result.bad, #test_device .advice, #test_device .advice p').delay(2000).fadeIn(250, function() {
+        $('#device_info #device_status').text(TEST_COMPLETE_STRING);
         $('#test_device .status_icon').removeClass('working').addClass('bad');
       });
     }

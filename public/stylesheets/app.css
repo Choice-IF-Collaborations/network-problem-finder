@@ -198,7 +198,21 @@ a {
 
 #content {
   overflow-x: scroll;
-  height: calc(100vh - (2 * (20px + 2em))); }
+  height: calc(100vh - 3em); }
+
+#intro {
+  background: #FFF;
+  position: absolute;
+  top: 3em;
+  width: 100vw;
+  text-align: center;
+  border-bottom: #CCC 1px solid; }
+  #intro p {
+    font-weight: 500;
+    margin: 1em 0;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 1.2; }
 
 #devices {
   overflow: auto; }
@@ -251,11 +265,15 @@ a {
     .test_bracket_container .test_bracket_content h2 {
       margin: 0.5em 0 1em 0; }
     .test_bracket_container .test_bracket_content p {
-      display: none; }
+      display: none;
+      margin-bottom: 0.1em;
+      line-height: 1.2; }
 
 @media (min-width: 768px) {
   .feed {
     padding: 1em 20% !important; }
+  #intro p {
+    font-size: 1.4em; }
   .device .label {
     font-size: 1em; }
   .device .bubble {
