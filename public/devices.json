@@ -1,0 +1,230 @@
+[
+  {
+    "name": "Abby's Phone",
+    "symbol": "symbol-phone.svg"
+  },
+  {
+    "name": "Abby's Tablet",
+    "symbol": "symbol-tablet.svg"
+  },
+  {
+    "name": "Brian's Phone",
+    "symbol": "symbol-phone.svg",
+    "hardware_name": "Android Candybar",
+    "hardware_model": "Early 2016 model",
+    "notifications": [
+      {
+        "timestamp": "6 months ago",
+        "body": "Android Phone purchased from <a href=\"#\">Phone Place</a>. It has <a href=\"#\">2 years warranty</a> and <a href=\"#\">2 years insurance</a>. <a href=\"#\">View receipt</a>."
+      },
+      {
+        "timestamp": "5 months ago",
+        "body": "A <a href=\"#\">setting you've changed</a> will allow your location to be tracked more frequently"
+      },
+      {
+        "timestamp": "5 months ago",
+        "body": "Your password has been changed"
+      },
+      {
+        "timestamp": "3 months ago",
+        "body": "There's a security problem in this version of your phone's software. It's affected by vulnerability CVE-2014-0160, also known as Heartbleed."
+      },
+      {
+        "timestamp": "3 months ago",
+        "body": "Your phone's software has been <span class=\"highlight\">updated from version 5.8.9 to 5.9.1</span>"
+      },
+      {
+        "timestamp": "2 months ago",
+        "body": "Phone taken in for repair at <a href=\"#\">Holloway Road Phone Repairs</a>. Expected return in 5 days. <a href=\"#\">View receipt</a>."
+      },
+      {
+        "timestamp": "2 months ago",
+        "body": "Damaged screen has been replaced at <a href=\"#\">Holloway Road Phone Repairs</a>. It cost <a href=\"#\">£23.99</a>."
+      },
+      {
+        "timestamp": "6 days ago",
+        "body": "Your mobile phone contract with MobiNet expires in 1 month"
+      },
+      {
+        "timestamp": "3 hours ago",
+        "body": "An update is required, the software on this phone is 6 months old"
+      },
+      {
+        "timestamp": "1 hour ago",
+        "body": "This phone has been <span class=\"highlight\">updated to version 6.0.0</span>. This update uses a <span class=\"highlight\">new privacy policy</span>."
+      }
+    ]
+  },
+  {
+    "name": "Brian's Laptop",
+    "symbol": "symbol-laptop.svg",
+    "hardware_name": "Hometech Micropad",
+    "hardware_model": "Mid-2015 model",
+    "notifications": [
+      {
+        "timestamp": "8 months ago",
+        "body": "Hometech Micropad laptop purchased from <a href=\"#\">notebookhouse.com</a>. It has <a href=\"#\">2 years warranty</a> and <a href=\"#\">no insurance</a>. <a href=\"#\">View receipt</a>."
+      },
+      {
+        "timestamp": "5 months ago",
+        "body": "Operating system updated <span class=\"highlight\">from Windows 8 to Windows 10</span>"
+      },
+      {
+        "timestamp": "5 months ago",
+        "body": "Windows 10 has a <span class=\"highlight\">new privacy policy</span>"
+      },
+      {
+        "timestamp": "4 months ago",
+        "body": "A new printer has been added to this computer"
+      },
+      {
+        "timestamp": "2 months ago",
+        "body": "Firewall has been turned on"
+      },
+      {
+        "timestamp": "1 month ago",
+        "body": "There's a security problem in this version of Windows 10. <a href=\"#\">Find out more</a>."
+      },
+      {
+        "timestamp": "1 month ago",
+        "body": "Operating system <span class=\"highlight\">updated from Windows 10 to Windows 10.1</span>"
+      },
+      {
+        "timestamp": "1 week ago",
+        "body": "A new application is trying to access your webcam and microphone"
+      },
+      {
+        "timestamp": "1 week ago",
+        "body": "Warranty expires in a month"
+      },
+      {
+        "timestamp": "Just now",
+        "body": "Your password has been changed"
+      }
+    ]
+  },
+  {
+    "name": "Smart TV",
+    "symbol": "symbol-tv.svg"
+  },
+  {
+    "name": "Kettle",
+    "symbol": "symbol-kettle.svg",
+    "hardware_name": "Dolce Gloss Kettle",
+    "hardware_model": "2015 version",
+    "notifications": [
+      {
+        "timestamp": "1 year ago",
+        "body": "Dolce Gloss Kettle purchased from <a href=\"#\">Homewares.com</a>. It has <a href=\"#\">5 years warranty</a> and no insurance. <a href=\"#\">View receipt</a>."
+      },
+      {
+        "timestamp": "11 months ago",
+        "body": "The version of Android on this kettle has been <span class=\"highlight\">updated from 5.9.1 to 5.9.3</a>."
+      },
+      {
+        "timestamp": "3 months ago",
+        "body": "This kettle's plug fuse has been replaced"
+      },
+      {
+        "timestamp": "2 months ago",
+        "body": "Remember to regularly descale the inside of this kettle. <a href=\"#\">Find out how</a>."
+      },
+      {
+        "timestamp": "Just now",
+        "body": "There's a security problem in this version of your kettle's software. It's affected by vulnerability CVE-2015-1539, also known as Stagefright."
+      }
+    ]
+  },
+  {
+    "name": "Digital Radio",
+    "symbol": "symbol-radio.svg"
+  },
+  {
+    "name": "Oven",
+    "symbol": "symbol-oven.svg",
+    "hardware_name": "Smartcook Oven",
+    "hardware_model": "2014 model",
+    "notifications": [
+      {
+        "timestamp": "2 years ago",
+        "body": "Smartcook Oven purchased from <a href=\"#\">Homewares in Wembley, UK</a>. It has <a href=\"#\">5 years warranty</a> and is <a href=\"#\">insured for 1 year</a>. <a href=\"#\">View receipt</a>."
+      },
+      {
+        "timestamp": "7 months ago",
+        "body": "Your oven should be looked at by an engineer in the next 3 months. <a href=\"#\">Book an appointment.</a>"
+      },
+      {
+        "timestamp": "4 months ago",
+        "body": "The oven was turned off for safety reasons. There may be a problem with its fan."
+      },
+      {
+        "timestamp": "4 months ago",
+        "body": "A bulb was changed inside the oven. It cost <a href=\"#\">£12.99</a> to replace."
+      },
+      {
+        "timestamp": "3 months ago",
+        "body": "There was an attempt to turn off child lock"
+      },
+      {
+        "timestamp": "1 month ago",
+        "body": "Connected services on your oven will be down for 24 hours. Some features may not work. <a href=\"#\">Find out more</a>."
+      },
+      {
+        "timestamp": "2 days ago",
+        "body": "An update is required, the software on this oven is 5 months old"
+      },
+      {
+        "timestamp": "1 day ago",
+        "body": "Software updated <span class=\"highlight\">from version 1.1.0 to 1.1.2</span>"
+      },
+      {
+        "timestamp": "Just now",
+        "body": "The oven was turned off for safety reasons. It lost the connection with your network."
+      }
+    ]
+  },
+  {
+    "name": "Hairdryer",
+    "symbol": "symbol-hairdryer.svg"
+  },
+  {
+    "name": "Abby's Electric Toothbrush",
+    "symbol": "symbol-toothbrush.svg"
+  },
+  {
+    "name": "Brian's Electric Toothbrush",
+    "symbol": "symbol-toothbrush.svg"
+  },
+  {
+    "name": "Abby's DSLR",
+    "symbol": "symbol-dslr.svg"
+  },
+  {
+    "name": "Fridge",
+    "symbol": "symbol-fridge.svg"
+  },
+  {
+    "name": "Microwave",
+    "symbol": "symbol-microwave.svg"
+  },
+  {
+    "name": "Washing Machine",
+    "symbol": "symbol-washing-machine.svg"
+  },
+  {
+    "name": "Brian's Shaver",
+    "symbol": "symbol-shaver.svg"
+  },
+  {
+    "name": "Echo",
+    "symbol": "symbol-echo.svg"
+  },
+  {
+    "name": "iMac",
+    "symbol": "symbol-imac.svg"
+  },
+  {
+    "name": "Apple Watch",
+    "symbol": "symbol-watch.svg"
+  }
+]

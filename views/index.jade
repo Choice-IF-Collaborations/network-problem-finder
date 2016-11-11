@@ -1,0 +1,57 @@
+doctype html
+html(lang="en")
+  head
+    title Smith's Home &bull; The Log
+    meta(name="viewport" charset="utf-8" content="width=device-width" initial-scale="1.0")
+    script(type="text/javascript" src="/public/javascripts/jquery.js")
+    script(type="text/javascript" src="/public/javascripts/app.js")
+    link(rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700")
+    link(rel="stylesheet" type="text/css" href="/public/stylesheets/app.css")
+  body
+    div(id="intro")
+      p(class="left")
+      a(href="https://projectsbyif.com") Projects By IF
+      p(class="right")
+    div(id="header")
+      h1 Smith's Home
+    div(id="content")
+      div(id="devices")
+    div(id="footer")
+      a(href="#" id="add_device") #[img(src="/public/images/add.svg")] Add a product
+    div(id="add_device_overlay" class="overlay")
+      div(class="header")
+        h1 Add product
+        a(href="#" class="close_overlay") Close
+      div(class="content")
+        a(href="#" id="take_photo_of_receipt") #[img(src="/public/images/camera.svg")] Take photo of receipt
+        div(class="seperator")
+          h2 What is this?
+          input(type="text" placeholder="Name of product")
+        div(class="seperator")
+          h2 Where did you buy it?
+          input(type="text" placeholder="Retailer name or URL")
+        div(class="seperator")
+          h2 When did you buy it?
+          input(type="text" placeholder="Date or how long ago")
+        div(class="seperator")
+          h2 How long is the warranty?
+          input(type="text" placeholder="Number of years")
+        div(class="seperator")
+          h2 Do you have insurance?
+          p
+            a(href="#", class="multiple_choice") Yes
+            a(href="#", class="multiple_choice") No
+            a(href="#", class="multiple_choice") I don't know
+      a(href="#" class="bottom_button" id="dismiss_add_device") Save
+    div(id="device_info" class="overlay")
+      div(class="header")
+        h1 Device name
+        a(href="#" class="close_overlay") Close
+      div(class="content")
+        div(class="meta")
+          img(id="device_symbol")
+          h2(id="device_hardware_name") –
+          h3(id="device_hardware_model") –
+          p
+            a(href="#") View Transparency Mark certificate
+        div(class="feed")
