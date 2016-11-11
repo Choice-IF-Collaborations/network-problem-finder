@@ -41,53 +41,119 @@ $(function() {
     return json;
   })();
 
-  $('body').on('click', '#add_device', function(e) {
-    e.preventDefault();
-
-    $('#add_device_overlay').css({
-      'top': $(window).height(),
-      'display': 'block'
-    }).animate({
-      'top': 0
-    }, 250);
-  });
+  let randomProblem = 2;
 
   $('body').on('click', '.device', function(e) {
     e.preventDefault();
 
     let device = devices[$(this).attr('id').replace("device_", "")];
 
-    if (device.notifications) {
-      // Change title
-      $('#device_info h1').text(device.name);
+    // Populate interface
+    $('#device_info h1').text(device.name);
+    $('#device_info #device_symbol').attr('src', '/public/images/' + device.symbol);
+    $('#device_info #device_hardware_name').text(device.hardware_name);
+    $('#device_info #device_hardware_model').text(device.hardware_model);
+    $('#test_device_name').text(device.name);
 
-      // Change device symbol
-      $('#device_info #device_symbol').attr('src', '/public/images/' + device.symbol);
+    //randomProblem = getRandomInt(0, 2);
 
-      // Change make and model info
-      $('#device_info #device_hardware_name').text(device.hardware_name);
-      $('#device_info #device_hardware_model').text(device.hardware_model);
+    // Move device info into view
+    $('#device_info').css({
+      'top': $(window).height(),
+      'display': 'block'
+    }).animate({
+      'top': 0
+    }, 250, function() {
+      startTestingInternetConnection();
+    });
 
-      // Add feed items
-      $('#device_info .feed').empty();
-
-      $.each(device.notifications, function(index, item) {
-        $('#device_info .feed').append('<div id="feed-' + index + '" class="feed_item"><p>' + item.body + '</p></div>');
-
-        $('#feed-' + index).append('<p class="timestamp">' + item.timestamp + '</p>');
-      });
-
-      $('#device_info').css({
-        'top': $(window).height(),
-        'display': 'block'
-      }).animate({
-        'top': 0
-      }, 250);
-
-      // Scroll back to top
-      $('#device_info .content').scrollTop(0);
-    }
+    // Scroll back to top
+    $('#device_info .content').scrollTop(0);
   });
+
+  function startTestingInternetConnection() {
+    setTimeout(function() {
+      $('#test_internet_connection .status_icon').removeClass('pending').addClass('working');
+
+      $('#test_internet_connection p.test').fadeIn(250, function() {
+        $('#test_internet_connection p.test').delay(1750).fadeOut(250);
+
+        if (randomProblem == 0) {
+          internetConnectionResult("bad");
+        } else {
+          internetConnectionResult("good");
+        }
+      });
+    }, 250);
+  }
+
+  function internetConnectionResult(status) {
+    if (status === "good") {
+      $('#test_internet_connection p.result.good').delay(2000).fadeIn(250, function() {
+        $('#test_internet_connection .status_icon').removeClass('working').addClass('good');
+        startTestingRouter();
+      });
+    } else if (status === "bad") {
+      $('#test_internet_connection p.result.bad, #test_internet_connection .advice, #test_internet_connection .advice p').delay(2000).fadeIn(250, function() {
+        $('#test_internet_connection .status_icon').removeClass('working').addClass('bad');
+      });
+    }
+  }
+
+  function startTestingRouter() {
+    setTimeout(function() {
+      $('#test_router .status_icon').removeClass('pending').addClass('working');
+
+      $('#test_router p.test').fadeIn(250, function() {
+        $('#test_router p.test').delay(1750).fadeOut(250);
+
+        if (randomProblem == 1) {
+          routerResult("bad");
+        } else {
+          routerResult("good");
+        }
+      });
+    }, 250);
+  }
+
+  function routerResult(status) {
+    if (status === "good") {
+      $('#test_router p.result.good').delay(2000).fadeIn(250, function() {
+        $('#test_router .status_icon').removeClass('working').addClass('good');
+        startTestingDevice();
+      });
+    } else if (status === "bad") {
+      $('#test_router p.result.bad, #test_router .advice, #test_router .advice p').delay(2000).fadeIn(250, function() {
+        $('#test_router .status_icon').removeClass('working').addClass('bad');
+      });
+    }
+  }
+
+  function startTestingDevice() {
+    setTimeout(function() {
+      $('#test_deviice .status_icon').removeClass('pending').addClass('working');
+
+      $('#test_device p.test').fadeIn(250, function() {
+        $('#test_device p.test').delay(1750).fadeOut(250);
+
+        if (randomProblem == 2) {
+          deviceResult("bad");
+        } else {
+          deviceResult("good");
+        }
+      });
+    }, 250);
+  }
+
+  function deviceResult(status) {
+    if (status === "good") {
+
+    } else if (status === "bad") {
+      $('#test_device p.result.bad, #test_device .advice, #test_device .advice p').delay(2000).fadeIn(250, function() {
+        $('#test_device .status_icon').removeClass('working').addClass('bad');
+      });
+    }
+  }
 
   $('body').on('click', '.close_overlay', function(e) {
     e.preventDefault();
@@ -102,4 +168,10 @@ $(function() {
       });
     });
   });
+
+  function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
 });

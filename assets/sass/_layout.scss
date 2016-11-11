@@ -23,13 +23,6 @@ a {
   color:#000;
 }
 
-#intro {
-  border-bottom:#AAA 1px solid;
-  width:100vw;
-  height:4em;
-  display:none;
-}
-
 #header {
   width:100vw;
   padding:1em 0;
@@ -43,16 +36,23 @@ a {
 
 #footer {
   width:100vw;
+  height:3em;
   position:absolute;
   left:0;
   bottom:0;
+  border-top:#CCC 1px solid;
 
   a {
+    background:orange;
+    color:#FFF;
     display:block;
-    background:$grey;
-    width:100vw;
-    padding:1em 0;
     text-align:center;
+    width:12em;
+    margin:0.5em auto;
+    height:2em;
+    line-height:1.8em;
+    border-radius:5px;
+
   }
 }
 
@@ -207,43 +207,7 @@ a {
   }
 
   .feed {
-    .feed_item {
-      background:#FFF;
-      border-bottom:$grey 1px solid;
-      padding:1em;
-
-      .highlight {
-        color:$orange;
-      }
-
-      &:first-child {
-        p {
-          font-size:1.25em;
-        }
-
-        .timestamp {
-          font-size:0.9em;
-        }
-      }
-
-      p {
-        line-height:1.2;
-
-        a {
-          border-bottom:#000 1px solid;
-          display:inline-block;
-          height:24px;
-        }
-      }
-
-      .timestamp {
-        font-weight:500;
-        font-size:0.8em;
-        text-transform:uppercase;
-        color:#AAA;
-        margin-top:0.5em;
-      }
-    }
+    padding:1em;
   }
 }
 
@@ -294,13 +258,74 @@ a {
   padding:1em;
 }
 
-@media (min-width: 768px) {
-  .feed_item {
-    padding:1em 20% !important;
+.test_bracket_container {
+  overflow:auto;
+  /*height:calc((100vh - 15em) / 3);*/
+  margin-bottom:2em;
 
-    &:first-child {
-      font-size:1.5em;
+  &:last-child {
+    margin-bottom:0;
+  }
+
+  .status_icon {
+    width:2em;
+    height:2em;
+    background-size:contain;
+    background-position:center center;
+    background-repeat:no-repeat;
+    float:left;
+    margin-right:0.5em;
+
+    &.pending {
+      background-image:url('/public/images/status_pending.svg')
     }
+
+    &.working {
+      background-image:url('/public/images/status_working.svg')
+    }
+
+    &.good {
+      background-image:url('/public/images/status_good.svg')
+    }
+
+    &.bad {
+      background-image:url('/public/images/status_bad.svg')
+    }
+  }
+
+  .test_bracket_content {
+    float:left;
+    width:calc(100% - 2.5em);
+
+    .advice {
+      background:#EEE;
+      padding:0.5em;
+      display:none;
+      margin-top:1em;
+
+      h3 {
+        font-weight:500;
+        margin-bottom:0.5em;
+      }
+
+      p {
+        line-height:1.1;
+      }
+    }
+
+    h2 {
+      margin: 0.5em 0 1em 0;
+    }
+
+    p {
+      display:none;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .feed {
+    padding:1em 20% !important;
   }
 
   .device {

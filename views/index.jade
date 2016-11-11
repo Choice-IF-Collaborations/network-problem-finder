@@ -1,48 +1,19 @@
 doctype html
 html(lang="en")
   head
-    title Smith's Home &bull; The Log
+    title Your network &bull; Connection Problem Finder
     meta(name="viewport" charset="utf-8" content="width=device-width" initial-scale="1.0")
     script(type="text/javascript" src="/public/javascripts/jquery.js")
     script(type="text/javascript" src="/public/javascripts/app.js")
     link(rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700")
     link(rel="stylesheet" type="text/css" href="/public/stylesheets/app.css")
   body
-    div(id="intro")
-      p(class="left")
-      a(href="https://projectsbyif.com") Projects By IF
-      p(class="right")
     div(id="header")
-      h1 Smith's Home
-    div(id="content")
-      div(id="devices")
-    div(id="footer")
-      a(href="#" id="add_device") #[img(src="/public/images/add.svg")] Add a product
-    div(id="add_device_overlay" class="overlay")
-      div(class="header")
-        h1 Add product
-        a(href="#" class="close_overlay") Close
-      div(class="content")
-        a(href="#" id="take_photo_of_receipt") #[img(src="/public/images/camera.svg")] Take photo of receipt
-        div(class="seperator")
-          h2 What is this?
-          input(type="text" placeholder="Name of product")
-        div(class="seperator")
-          h2 Where did you buy it?
-          input(type="text" placeholder="Retailer name or URL")
-        div(class="seperator")
-          h2 When did you buy it?
-          input(type="text" placeholder="Date or how long ago")
-        div(class="seperator")
-          h2 How long is the warranty?
-          input(type="text" placeholder="Number of years")
-        div(class="seperator")
-          h2 Do you have insurance?
-          p
-            a(href="#", class="multiple_choice") Yes
-            a(href="#", class="multiple_choice") No
-            a(href="#", class="multiple_choice") I don't know
-      a(href="#" class="bottom_button" id="dismiss_add_device") Save
+      h1 Connection Problem Finder
+    div(id="content" style="height: calc(100vh - 3em);")
+      div(id="intro" style="background:#FFF; position:absolute; top:3em; width:100vw; text-align:center; border-bottom:#CCC 1px solid;")
+        p(style="font-weight:500; margin:1em 0; font-weight:500; font-size:1.5em;") What product are you having problems with?
+      div(id="devices" style="position:absolute; top:7.6em;")
     div(id="device_info" class="overlay")
       div(class="header")
         h1 Device name
@@ -50,8 +21,34 @@ html(lang="en")
       div(class="content")
         div(class="meta")
           img(id="device_symbol")
-          h2(id="device_hardware_name") –
-          h3(id="device_hardware_model") –
-          p
-            a(href="#") View Transparency Mark certificate
-        div(class="feed")
+          h2(id="device_hardware_name") Checking for network problems
+        div(class="feed" style="")
+          div(id="test_internet_connection" class="test_bracket_container")
+            div(class="status_icon pending")
+            div(class="test_bracket_content")
+              h2 Your NBN connection
+              p(class="test") Checking for a working connection...
+              p(class="result bad") Your Internet connection isn't working.
+              p(class="result good") Your Internet connection is working.
+              div(class="advice")
+                h3 How can I get help?
+                p Your connection is provided by AusConnect. Call them at 1800 123 456 to arrange a visit from an engineer. Lines are open 24 hours. 
+          div(id="test_router" class="test_bracket_container")
+            div(class="status_icon pending")
+            div(class="test_bracket_content")
+              h2 Your router
+              p(class="test") Checking the signal strength of your router...
+              p(class="result bad") Your router isn't working.
+              p(class="result good") Your router is working.
+              div(class="advice")
+                h3 How can I get help?
+                p Your router was supplied by your Internet con dnection with AusConnect. Call them at 1800 123 456 to arrange a visit from an engineer. Lines are open 24 hours.
+          div(id="test_device" class="test_bracket_container")
+            div(class="status_icon pending")
+            div(class="test_bracket_content")
+              h2 Your #[span(id="test_device_name") test device name]
+              p(class="test") Checking if this product can be found...
+              p(class="result bad") Can't find this device.
+              div(class="advice")
+                h3 How can I get help?
+                p This product was made by XXXX. Call them at 1800 XXX XXXX to talk to their support. Lines are open XXXXX.
