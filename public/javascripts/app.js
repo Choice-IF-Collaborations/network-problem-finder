@@ -7,7 +7,7 @@ $(function() {
     $.ajax({
       'async': false,
       'global': false,
-      'url': '/public/devices.json',
+      'url': '/devices.json',
       'dataType': "json",
       'success': function (data) {
         $.each(data, function(index, data) {
@@ -22,13 +22,13 @@ $(function() {
             'display': 'flex',
             'justify-content': 'center',
             'align-items': 'center',
-            'background-image': "url('/public/images/" + data.symbol + "')"
+            'background-image': "url('/images/" + data.symbol + "')"
           });
 
           if (data.notifications) {
             data.notifications.reverse();
             $('#device_' + index).css({
-                'background-image': "url('/public/images/problem-background.svg')"
+                'background-image': "url('/images/problem-background.svg')"
             });
 
             $('#device_' + index + ' .label p').append('<span class="bubble">!</span>');
@@ -52,7 +52,7 @@ $(function() {
 
     // Populate interface
     $('#device_info h1').text(device.name);
-    $('#device_info #device_symbol').attr('src', '/public/images/' + device.symbol);
+    $('#device_info #device_symbol').attr('src', '/images/' + device.symbol);
     $('#device_info #device_hardware_name').text(device.hardware_name);
     $('#device_info #device_hardware_model').text(device.hardware_model);
     $('#test_device_name').text(device.name);
